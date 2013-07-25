@@ -1,0 +1,39 @@
+---
+layout: post
+title: Mailcleaner Update Fix
+categories:
+- IT
+tags:
+- email
+- mailcleaner
+- Server
+- SMTP
+- spam filter
+- spam issues
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wp_old_slug: working-with-free-oss-spam-filtering
+---
+One of the places at which I do IT work runs a Microsoft Exchange 2003 Server for their email. They'd be having spam issues for quite some time, but were mostly resigned to turning on junkmail filtering, adding custom rulesets, and creating white and blacklists. Sometimes mails would go missing, but with the filter spaghetti, it was hard to tell where or why. MS, of course introduced IMF, but that was basically the equivalent of trying to stop a rushing river with a paper plate.
+
+When I started working for them, one of the things I wanted to do was end this mess.<!--more--> Being a fan of open source software (and having a project budget of $0), I started poking around into the various options. At first, I was looking for something to hook directly into the server, but I quickly found that there was no cheap way of going about it. However, I did find that you could drop a spam filter gateway SMTP server right in front of it. I tried looking for an all inclusive package, but was unfortunately not able to, I was going to have to set it up piece by piece. I ended up setting up a postfix box, with spam-assassin, mailscanner, and some RBL checks. I spent about 2 weeks customizing it and setting it just right.
+
+It worked well for about a year, but by then, the rapid Ubuntu development had broken many of the packages I installed, to the point that the server was barely able to boot. In addition, a few users were reporting false positives, and try as I might, I couldn't release them from the quarantine.
+
+I went back to the drawing board. This time, I took note of a piece of software called <a href="http://www.mailcleaner.org/">mailcleaner</a>. It ran a setup very similar to the one I had custom made, except it was more of an all-in-one package. It promised to install and be configured within a couple of hours. It was the truth. It's one of the easiest things I've had to set up. It wasn't without its quirks though. I noticed the <a href="http://www.mailcleaner.org/doku.php/documentation:updates">update process</a> wasn't working correctly. I poked around in the shell and documents, and noticed it was based on an old build of Debian (sarge). Updates for the OS had ended earlier in the year. Even the repository for the mailcleaner software itself wasn't working. Quick fix for this, just change the repo locations. I had earlier noticed that the last update was scripted to replace the repo locations (I'm guessing this was a problem already), so easily inserted the new locations into the update script.
+
+To do this, you run the updates like normal, until you get to the 2009012201 patch. You'll need to edit the patch. It's located at /usr/mailcleaner/updates/2009012201. Around line 32  you'll see:
+<pre>cat &gt; /etc/apt/sources.list &lt;&lt; EOF
+deb http://archive.debian.org/debian sarge main non-free contrib
+#deb http://archive.debian.org/debian-security sarge/updates main non-free contrib
+deb http://pool.mailcleaner.org sarge mailcleaner
+EOF</pre>
+Replace the lines so it looks like:
+<pre>cat &gt; /etc/apt/sources.list &lt;&lt; EOF
+deb ftp://archive.debian.org/debian-archive/debian sarge main non-free contrib
+deb ftp://mirror.switch.ch/mirror/mailcleaner.org/ stable mailcleaner
+EOF</pre>
+Apply the patch as per <a href="http://www.mailcleaner.org/doku.php/documentation:updates">the normal instructions</a>, and everything should go fine.

@@ -1,0 +1,32 @@
+---
+layout: post
+title: Mailcleaner SpamAssassin 2010 Bug
+categories:
+- IT
+tags:
+- mailcleaner
+- Server
+- SMTP
+- spam filter
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+SpamAssassin was reported to have a date-related bug in it, you can <a href="http://it.slashdot.org/story/10/01/02/0027207/SpamAssassin-2010-Bug">find more info here</a>. This post will detail the way you can fix the bug if you happen to be running <a href="http://www.mailcleaner.org/">mailcleaner</a>. I haven't tested it fully, and don't know how permanent it'll be, but hopefully it'll be of some use.
+
+<!--more-->
+
+First, open an ssh connection to your mailcleaner server. I'm using Linux, if you're on Windows, use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a> or something.:
+<pre>ssh root@mailcleaner</pre>
+The default password is "def". Then, do:
+<pre>nano /usr/local/share/spamassassin/72_active.cf</pre>
+A quick little text editor should pop up. Hit Ctrl+W to do a search, and type "FH_DATE_PAST_20XX" into the search field. Hit enter. You'll see a line like the following:
+<pre>header   FH_DATE_PAST_20XX      Date =~ /20[1-9][0-9]/ [if-unset: 2006]
+</pre>
+Change it to:
+<pre>header   FH_DATE_PAST_20XX      Date =~ /20[2-9][0-9]/ [if-unset: 2006]</pre>
+Ctrl+X to exit, and Y, when asked if you want to save. You're mostly done. You just need to log into the admin interface and restart the applicable services. Or reboot, if you don't know how to do that.
+
+The part I'm not too sure about is when the rule will be overwritten. I haven't investigated to see if mailcleaner is grabbing a new set of rules every so often or not, so I'll just have to keep my eye on the scoring for now.
