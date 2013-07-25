@@ -3,3 +3,5 @@ markdown: redcarpet
 pygments: true
 
 permalink: /blog/:categories/:year/:month/:day/:title
+
+user.name: Nik LaBelle
