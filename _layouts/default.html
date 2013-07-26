@@ -1,33 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width">
-
-    <!-- normalize.css -->
-    <link rel="stylesheet" href="/lib/css/normalize.css">
-
-    <!-- syntax highlighting CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/main.css">
-
-  </head>
-  <body>
+{% include start.html %}
+{% include head.html %}
+ <body>
     <header>
-      <h1>
-        <a href="/">{{ site.name }}</a>
-      </h1>
-
-      <nav>
-        <a href="/blog">blog</a>
-      </nav>
+      <img src="http://s.gravatar.com/avatar/925cda547e97805cbdc56b01c5ff467d?s=160" />
+      <div class="header">
+        <h1>
+          {% unless page.path contains '_posts' %}
+          <a href="/">{{ site.name }}{%if page.title %}: {{ page.title }} {% endif %}</a>
+          {% else %}
+          <a href="/">{{ site.name }}{%if page.title %}: blog: {{ page.title }} {% endif %}</a>
+          {% endunless %}
+        </h1>
+        <nav>
+          <a href="/">home</a> &#124;
+          <a href="/blog">blog</a>
+        </nav>
+      </div>
+      <div class="clearfloat"></div>
     </header>
     <section>
       {{ content }}
     </section>
   </body>
-</html>
+{% include end.html %}

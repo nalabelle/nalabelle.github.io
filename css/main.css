@@ -1,0 +1,56 @@
+/* Try these:
+ * #FAFAFA - grey
+ * #0D56A6 - kinda light blue
+ * #FFC600 - yellowy
+ * #FF5900 - orange
+ * #04356C - dark blue
+*/
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic&subset=latin,latin-ext);
+
+body, * {
+  background-color: #FAFAFA;
+}
+
+body {
+  margin: 20px;
+}
+
+header, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #04356C;
+}
+
+
+header {
+  display: block;
+}
+
+header > img {
+  float: left;
+}
+
+header > .header {
+  display: inline;
+  float: left;
+  margin-left: 20px;
+}
+
+header > h1 {
+}
+
+header > nav {
+}
+
+.clearfloat {
+  clear: both;
+  float: none;
+}
