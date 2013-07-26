@@ -2,4 +2,4 @@ name: nalabelle
 markdown: redcarpet
 pygments: true
 
-permalink: /blog/:categories/:year/:month/:day/:title
+permalink: /words/:categories/:year/:month/:day/:title

@@ -8,12 +8,12 @@
           {% unless page.path contains '_posts' %}
           <a href="/">{{ site.name }}{%if page.title %}: {{ page.title }} {% endif %}</a>
           {% else %}
-          <a href="/">{{ site.name }}{%if page.title %}: blog: {{ page.title }} {% endif %}</a>
+          <a href="/">{{ site.name }}{%if page.title %}: words: {{ page.title }} {% endif %}</a>
           {% endunless %}
         </h1>
         <nav>
           <a href="/">home</a> &#124;
-          <a href="/blog">blog</a>
+          <a href="/words">words</a>
         </nav>
       </div>
       <div class="clearfloat"></div>
