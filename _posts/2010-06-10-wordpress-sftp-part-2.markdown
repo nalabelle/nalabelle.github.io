@@ -1,0 +1,30 @@
+---
+author: admin
+comments: true
+date: 2010-06-10 19:00:52+00:00
+layout: post
+slug: wordpress-sftp-part-2
+title: WordPress SFTP Part 2
+wordpress_id: 175
+categories:
+- IT
+tags:
+- Lucid
+- PHP
+- Server
+- SFTP
+- Ubuntu
+- WordPress
+---
+
+Note: This is an update of my previous post about enabling SFTP for WordPress [available here](http://hypertoast.net/blog/2009/06/16/wordpress-sftp/).
+
+I updated to Ubuntu 10.04, also known as Lucid Lynx, on my server and SFTP in PHP applications stopped working. Turns out that the pecl build isn't compatible with the version of PHP shipped with 10.04, as far as I can tell. I tried reinstalling it, but it wouldn't build. Thankfully I found out that there's a package of it available in the repos.
+
+Here's the new method to enable SSH in PHP, which makes SFTP in WordPress work again.
+
+    
+    user@computer:~$ sudo apt-get install libssh2-php
+
+
+Restart Apache and you're on your way. Way simpler than before is just a nice bonus.

@@ -1,25 +1,23 @@
-{% include start.html %}
 {% include head.html %}
- <body>
-    <header>
+<body>
+  <header>
+    <a href="/">
       <img src="http://s.gravatar.com/avatar/925cda547e97805cbdc56b01c5ff467d?s=160" />
-      <div class="header">
-        <h1>
-          {% unless page.path contains '_posts' %}
-          <a href="/">{{ site.name }}{%if page.title %}: {{ page.title }} {% endif %}</a>
-          {% else %}
-          <a href="/">{{ site.name }}{%if page.title %}: words: {{ page.title }} {% endif %}</a>
-          {% endunless %}
-        </h1>
-        <nav>
-          <a href="/">home</a> &#124;
-          <a href="/words">words</a>
-        </nav>
-      </div>
-      <div class="clearfloat"></div>
-    </header>
-    <section>
-      {{ content }}
-    </section>
-  </body>
-{% include end.html %}
+    </a>
+    <h1>
+      {% unless page.path contains '_posts' %}
+      <a href="/">{{ site.name }}</a>{%if page.title %}: {{ page.title }} {% endif %}
+      {% else %}
+      <a href="/">{{ site.name }}</a>: blog
+      {% endunless %}
+    </h1>
+    <nav>
+      <a href="/">home</a>
+      <a href="/blog">blog</a>
+      <a href="/resume">résumé</a>
+      <a href="/contact">contact</a>
+    </nav>
+  </header>
+  {{ content }}
+</body>
+{% include footer.html %}

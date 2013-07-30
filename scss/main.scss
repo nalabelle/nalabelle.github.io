@@ -1,0 +1,104 @@
+/* Try these:
+ * #FAFAFA - grey
+ * #0D56A6 - kinda light blue
+ * #FFC600 - yellowy
+ * #FF5900 - orange
+ * #04356C - dark blue
+*/
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic&subset=latin,latin-ext);
+/* @import "lib/foundation/scss/foundation"; */
+@import "lib/foundation/scss/foundation/components/global";
+@import "lib/foundation/scss/foundation/components/grid";
+@import "lib/foundation/scss/foundation/components/type";
+
+@import "lib/foundation/scss/foundation/components/breadcrumbs";
+@import "lib/foundation/scss/foundation/components/panels";
+
+body > header { @include grid-row;
+  > a { @include grid-column(2); }
+  > h1 { @include grid-column(10);}
+  > nav {
+    @include grid-column(10);
+    @include crumb-container;
+    a { @include crumbs; }
+  }
+}
+
+article, section {
+  .thisIsFoundationsFault {
+    @include grid-row;
+    h2 { @include grid-column(12); }
+  }
+  header {
+    @include grid-row;
+    h2 { @include grid-column(10); }
+    .meta { @include grid-column(2); }
+  }
+  p, pre { @include grid-row; }
+}
+
+section.posts {
+  li {
+    list-style-type: none;
+    header {
+      @include grid-row;
+      span { @include grid-column(2); }
+      a { @include grid-column(10); }
+    }
+    section {
+      @include grid-row;
+      p { @include grid-column(12); }
+      pre { @include grid-column(11, false, false, 1); }
+    }
+  }
+}
+
+/*
+body, * {
+  background-color: #FAFAFA;
+}
+
+body {
+  margin: 20px;
+}
+
+header, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #04356C;
+}
+
+
+header {
+  display: block;
+}
+
+header > img {
+  float: left;
+}
+
+header > .header {
+  display: inline;
+  float: left;
+  margin-left: 20px;
+}
+
+header > h1 {
+}
+
+header > nav {
+}
+
+.clearfloat {
+  clear: both;
+  float: none;
+}
+*/

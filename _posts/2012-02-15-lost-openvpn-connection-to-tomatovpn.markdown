@@ -1,0 +1,26 @@
+---
+author: admin
+comments: true
+date: 2012-02-15 20:05:31+00:00
+layout: post
+slug: lost-openvpn-connection-to-tomatovpn
+title: Lost OpenVPN Connection to TomatoVPN
+wordpress_id: 26
+categories:
+- IT
+---
+
+This is directed toward a pretty specific audience, so this probably won't be too useful for many people. If you have [TomatoVPN](http://tomatovpn.keithmoyer.com/) with OpenVPN set up, sometimes the [OpenVPN](http://openvpn.net/) server will go down, and you'll lose access. It's happened to me many times where all of a sudden, I get a disconnect and an error like the following in my logs:
+
+`Feb 15 11:34:34 localbox ovpn-client[2621]: TLS Error: TLS key negotiation failed to occur within 60 seconds (check your network connectivity)
+Feb 15 11:34:34 localbox ovpn-client[2621]: TLS Error: TLS handshake failed`
+
+Due to this, I've come up with a routine to work around the problem. First, you need to make sure you can SSH in from outside your network. The settings I use look like this:
+
+[![](http://hypertoast.net/blog/wp-content/uploads/2012/02/tomato-300x194.png)](http://hypertoast.net/blog/wp-content/uploads/2012/02/tomato.png)
+
+Assuming you can still SSH in, the process to restart the OpenVPN server is pretty simple. Just use the option -D and specify a port, to set up a proxy for your web browser.
+
+`ssh -D 1800 root@yourtomato`
+
+After that, configure the proxy on your local machine or browser to use localhost on port 1800, and you should be able to reach Tomato on its LAN IP.
