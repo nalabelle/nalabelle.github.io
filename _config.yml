@@ -2,4 +2,21 @@ name: nalabelle
 markdown: redcarpet
 pygments: true
 
-permalink: /words/:categories/:year/:month/:day/:title
+# Assign blog navigation here
+permalink: /blog/:categories/:year/:month/:day/:title
+
+# Assign site navigation
+navigation:
+  - text: Home
+    title: Home
+    url: /
+  - text: Blog
+    title: Blog
+    url: /blog/
+    meta: post
+  - text: Résumé
+    title: Résumé
+    url: /resume/
+  - text: Contact
+    title: Contact Me
+    url: /contact/

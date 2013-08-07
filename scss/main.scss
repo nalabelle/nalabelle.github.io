@@ -1,58 +1,17 @@
-/* Try these:
- * #FAFAFA - grey
- * #0D56A6 - kinda light blue
- * #FFC600 - yellowy
- * #FF5900 - orange
- * #04356C - dark blue
-*/
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic&subset=latin,latin-ext);
-/* @import "lib/foundation/scss/foundation"; */
-@import "lib/foundation/scss/foundation/components/global";
-@import "lib/foundation/scss/foundation/components/grid";
-@import "lib/foundation/scss/foundation/components/type";
+@import url(http://fonts.googleapis.com/css?family=Cantarell);
 
-@import "lib/foundation/scss/foundation/components/breadcrumbs";
-@import "lib/foundation/scss/foundation/components/panels";
+/* normalize.css */
+@import "/lib/css/normalize.css";
 
-body > header { @include grid-row;
-  > a { @include grid-column(2); }
-  > h1 { @include grid-column(10);}
-  > nav {
-    @include grid-column(10);
-    @include crumb-container;
-    a { @include crumbs; }
-  }
-}
+@import "variables";
 
-article, section {
-  .thisIsFoundationsFault {
-    @include grid-row;
-    h2 { @include grid-column(12); }
-  }
-  header {
-    @include grid-row;
-    h2 { @include grid-column(10); }
-    .meta { @include grid-column(2); }
-  }
-  p, pre { @include grid-row; }
-}
+@import "corners";
+@import "shadows";
 
-section.posts {
-  li {
-    list-style-type: none;
-    header {
-      @include grid-row;
-      span { @include grid-column(2); }
-      a { @include grid-column(10); }
-    }
-    section {
-      @include grid-row;
-      p { @include grid-column(12); }
-      pre { @include grid-column(11, false, false, 1); }
-    }
-  }
-}
+@import "typography";
+@import "structure";
 
 /*
 body, * {
