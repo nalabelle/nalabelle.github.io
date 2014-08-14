@@ -1,0 +1,71 @@
+==================================================================
+https://keybase.io/nalabelle
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://niklabelle.com
+  * I am nalabelle (https://keybase.io/nalabelle) on keybase.
+  * I have a public key with fingerprint 5C85 A60E AF32 2E03 16C7  6AF4 EDE5 B7FA D34D 60B1
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "5c85a60eaf322e0316c76af4ede5b7fad34d60b1",
+            "host": "keybase.io",
+            "key_id": "ede5b7fad34d60b1",
+            "uid": "14b94e7eb811c0a7dbf9249c1ce20a00",
+            "username": "nalabelle"
+        },
+        "service": {
+            "hostname": "niklabelle.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1408058557,
+    "expire_in": 157680000,
+    "prev": "a8c2ceb54441f41fd129c62d42ac52291618816c5c784c25b6b370973b1af44b",
+    "seqno": 6,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.3.1
+Comment: https://keybase.io/crypto
+
+yML3AnicO8LLzMDFKLE10GI9z2N2xtMHvpQyBL912VutlJSfUqlkVa2UnQqm0jLz
+0lOLCooy80qUrJRMky1ME80MUhPTjI2MUg2MDc2Szc0S00xSU1JNk8zTElOMTVLM
+DJIMlXSUMvKLQTqAxiQlFqfqZeYDxYCc+MwUoCgW9aVgCUOTJEuTVPPUJAtDw2SD
+RPOUpDRLIxPLZMPkVCODRAMDkMLi1KK8xNxUoOq8xJzEpNScnFSlWh0loHBZZnIq
+yNEgu2FKMrOhavSS83OB2guK8kvyk/NzgHIZJSUFViCtJZUFILXlqUnxUFPikzLz
+UoBeB2ooSy0qzszPU7IyBKpMLskEGWtoYmBhYGphamquo5RaUZBZlBqfCVJham5m
+YQAEIGtSy4BGJlokGyWnJpmamJgYpgFRiqGRZbKZUYqJUWKyqZGRpaGZoYUFMBRN
+k80tTJKNTJPMkozNDSzNjZMMgcFqkqQE8ldhXr6SlRnQmYnpQCOLM9PzEktKi4Ce
+PnQwhoWBkYuBjZUJFHkMXJwCsCh93S7AMOG4tfQP7mIPw0LjWp9qTavPHD1u/asW
+idbyHlvyqb71z5dFyt2lrH+Pzd9fZNv4UWPrLodv9wt85Pw6Fmj8WPymZT1njjZf
+gnnDCdEFns+aN0zjZHmfnbjold8ruRmy/03PCcyY1fw7KWPxips7jXZZmXo6VC5r
+9Xx+/33WxC4u9a6NWTrhXifPhWpGHZ8Xtb5X7dbDH7ctTpya76X0cib/n8dX7v9Y
+cN70ZkZW65XjUvufbNP6IMn2ZFXcuo+/61/19O66amrX/slvZ/fi7OMnJ+RONk9R
+P+I/N//gVA1PcbfAe/ONqpvZPiyya5ZlnVL4yvrDdLWTntYSt4oDFDIYnReIO258
+v8zn/Wyp5RrvZnuGna9w3nvgnuO+VytLuj5WnluwrCJqa2Rao9IOFlNd43jd+yWb
+16dpHX9gwFOreE30gNbBnMOzp7zP3dv2UybZYucPVfWtwgtP3dg6W0DD+8Cv7cJO
+h0UyFGV7rl7OjZvo0PZTzewY/92Al2crygst5tTOlZgzfR23udqMqg7ed4J+hrHT
+rrn+95s+9bG0kO9m5mnLMtit5y1pv2lw4BDPtdIm7wzWuZPONUT5vd1bVP03L/tB
+9wvmLN5TMjx5s18LKE5mPbZo/1au698eXV7IYNb7OyXfc/5ptX9t5YJnzaeaMfbF
+WpSxtj4VP853JWADO8t+nlOyx1fPZnooFPyha1WCSp1PX7ZNPABQWpOW
+=ilmi
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/nalabelle
+
+==================================================================
+
