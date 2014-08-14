@@ -2,12 +2,15 @@ name: nalabelle
 markdown: redcarpet
 pygments: true
 
+# Assign blog navigation here
+permalink: /blog/:categories/:year/:month/:day/:title
+
 # Assign site navigation
 navigation:
   - text: Home
     title: Home
     url: /
- - text: Résumé
+  - text: Résumé
     title: Résumé
     url: /resume/
   - text: Contact
