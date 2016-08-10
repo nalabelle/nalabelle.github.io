@@ -1,6 +1,5 @@
 name: nalabelle
 title: nalabelle
-markdown: redcarpet
-highlighter: pygments
+
 sass:
   sass_dir: _scss

@@ -10,8 +10,6 @@ $mainBackground: #232323;
 $textBackground: #ededed;
 
 $linkColor: #e11921;
-$linkColorActive: #000;
-$linkBackgroundActive: #ededed;
 $linkBackgroundHover: #a4060a;
 
 /* Font */
@@ -20,22 +18,14 @@ $linkBackgroundHover: #a4060a;
   color: $headerColor;
 }
 
-@mixin paragraphType {
-  font-family: $paragraphFonts;
-}
-
 @mixin linkType {
   color: $linkColor;
   text-decoration: none;
 }
 
-@mixin linkActive {
-  color: $linkColorActive;
-  background: $linkBackgroundActive;
-}
-
 @mixin linkHover {
   background: $linkBackgroundHover;
+  text-decoration: none;
   color: #fff;
 }
 
@@ -49,41 +39,36 @@ h6 {
   @include headerType;
 }
 
-p {
-  @include paragraphType;
+a.btn-link {
+  @include corners(5px);
+  @include linkType;
+  &:hover {
+    @include linkHover;
+  }
 }
 
-a {
-  @include linkType;
-  &:active,
-  &.current {
-    @include linkActive;
-  }
+p.btn-nolink {
+  cursor: default;
 }
 
 body {
   background: $mainBackground;
-  > header {
-    width: $width;
-    margin: 0 auto 10px;
-  }
 
   .main {
     width: $width;
     margin: 0 auto;
+  }
 
-    section > p,
-    section > ul {
-      padding: 10px;
+  p, ul {
+    padding: 10px !important;
+    @include corners(5px);
+    background: $textBackground;
+    > pre {
       @include corners(5px);
-      background: $textBackground;
-      > pre {
-        @include corners(5px);
-      }
     }
   }
 
-  section:after {
+  section:before {
     content: "";
     border: none;
     display:block;
