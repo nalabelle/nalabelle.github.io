@@ -1,0 +1,97 @@
+/* Variables */
+$headerFonts: 'Roboto Slab', serif;
+$headerColor: #fff;
+
+$paragraphFonts: Cantarell, Helvetica, Arial, sans-serif;
+$width: 960px;
+
+$mainColor: #fff;
+$mainBackground: #232323;
+$textBackground: #ededed;
+
+$linkColor: #e11921;
+$linkColorActive: #000;
+$linkBackgroundActive: #ededed;
+$linkBackgroundHover: #a4060a;
+
+/* Font */
+@mixin headerType {
+  font-family: $headerFonts;
+  color: $headerColor;
+}
+
+@mixin paragraphType {
+  font-family: $paragraphFonts;
+}
+
+@mixin linkType {
+  color: $linkColor;
+  text-decoration: none;
+}
+
+@mixin linkActive {
+  color: $linkColorActive;
+  background: $linkBackgroundActive;
+}
+
+@mixin linkHover {
+  background: $linkBackgroundHover;
+  color: #fff;
+}
+
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include headerType;
+}
+
+p {
+  @include paragraphType;
+}
+
+a {
+  @include linkType;
+  &:active,
+  &.current {
+    @include linkActive;
+  }
+}
+
+body {
+  background: $mainBackground;
+  > header {
+    width: $width;
+    margin: 0 auto 10px;
+  }
+
+  .main {
+    width: $width;
+    margin: 0 auto;
+
+    section > p,
+    section > ul {
+      padding: 10px;
+      @include corners(5px);
+      background: $textBackground;
+      > pre {
+        @include corners(5px);
+      }
+    }
+  }
+
+  section:after {
+    content: "";
+    border: none;
+    display:block;
+    height: 10px;
+    text-align: center;
+    clear: both;
+    width: 100%;
+    background: transparent url("/images/hr.gif") no-repeat bottom center;
+  }
+}
+

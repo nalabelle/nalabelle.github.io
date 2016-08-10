@@ -1,18 +1,6 @@
 name: nalabelle
+title: nalabelle
 markdown: redcarpet
-pygments: true
-
-# Assign blog navigation here
-permalink: /blog/:categories/:year/:month/:day/:title
-
-# Assign site navigation
-navigation:
-  - text: Home
-    title: Home
-    url: /
-  - text: Résumé
-    title: Résumé
-    url: /resume/
-  - text: Contact
-    title: Contact Me
-    url: /contact/
+highlighter: pygments
+sass:
+  sass_dir: _scss

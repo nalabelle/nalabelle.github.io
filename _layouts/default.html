@@ -1,19 +1,5 @@
 {% include head.html %}
-<body>
-  <header>
-  <a href="/">
-    <img src="http://s.gravatar.com/avatar/925cda547e97805cbdc56b01c5ff467d?s=160" />
-  </a>
-  <h1>
-    {% unless page.path contains '_posts' %}
-    <a href="/">{{ site.name }}</a>{%if page.title %}: {{ page.title }} {% endif %}
-    {% else %}
-    <a href="/">{{ site.name }}</a>: blog
-    {% endunless %}
-  </h1>
-  {% include navigation.html %}
-  </header>
-  <div class="main{% if page.meta != nil %} {{ page.meta }}{% endif %}">
-  {{ content }}
-  </div>
+    <div class="container main{% if page.meta != nil %} {{ page.meta }}{% endif %}">
+    {{ content }}
+    </div>
 {% include footer.html %}
