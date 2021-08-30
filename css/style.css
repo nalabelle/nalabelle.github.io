@@ -1,16 +1,24 @@
+/* Palette
+ * #c1d5de
+ * #768691
+ * #14171b
+ * #141f38
+ * #6c8cbc
+ */
+
 body {
   background-color: #14171b;
-  color: #768691;
+  color: #c1d5de;
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.45;
   padding-left: 25px;
 }
 
 a, a:visited {
-  text-decoration: none;
   color: #6c8cbc;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #c1d5de;
+  color: #768691;
 }
