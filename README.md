@@ -1,5 +1,4 @@
 Hi, I work with computers! My name is Nik and I live in California.
-![GitHub](https://github.githubassets.com/favicons/favicon.png)
 
 ## Links
 - [Github](https://github.com/nalabelle)
