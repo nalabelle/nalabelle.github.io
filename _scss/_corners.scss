@@ -1,7 +1,0 @@
-@mixin corners($radius) {
-  border-radius: $radius $radius $radius $radius;
-  -khtml-border-radius: $radius $radius $radius $radius;
-  -webkit-border-radius: $radius $radius $radius $radius;
-  -moz-border-radius: $radius $radius $radius $radius;
-}
-
