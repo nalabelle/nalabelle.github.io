@@ -3,3 +3,5 @@ title: nalabelle
 
 sass:
   sass_dir: _scss
+
+theme: jekyll-theme-tactile
