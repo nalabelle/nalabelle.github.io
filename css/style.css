@@ -8,14 +8,14 @@
 
 body {
   background-color: #14171b;
-  color: #c1d5de;
+  color: #d7d7d7;
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.45;
   padding-left: 25px;
 }
 
 a, a:visited {
-  color: #6c8cbc;
+  color: #c1d5de;
   text-decoration: none;
 }
 
