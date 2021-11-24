@@ -22,3 +22,8 @@ a, a:visited {
 a:hover {
   color: #768691;
 }
+
+nav ul {
+  list-style-type: none;
+}
+  
