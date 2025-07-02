@@ -1,2 +1,18 @@
+# Jekyll artifacts
 _site
 .sass-cache
+
+# Development environment
+.devbox/
+.direnv/
+
+# Editor artifacts
+.vscode/
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
